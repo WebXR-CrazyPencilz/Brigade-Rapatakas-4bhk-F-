@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>360 Viewer</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background: #000; }
+
+    /* PANEL */
+    #side-panel {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 260px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(10px);
+      transform: translateX(-100%);
+      transition: 0.3s;
+      z-index: 100;
+      overflow-y: auto;
+    }
+
+    #side-panel.open {
+      transform: translateX(0);
+    }
+
+    #side-panel.open + #toggle,
+    #toggle.open {
+      left: 260px; /* same as panel width */
+    }
+
+    /* TOGGLE BUTTON */
+    #toggle {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%); /* perfect vertical center */
+      z-index: 200;
+      width: 42px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      font-size: 22px;
+      cursor: pointer;
+      border-radius: 0 10px 10px 0;
+      transition: left 0.3s ease, transform 0.3s ease;
+      outline: none;
+    }
+
+    /* ROOM BUTTON */
+    .room-btn {
+      position: relative;
+      height: 70px;
+      margin: 6px;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      border: none;
+    }
+
+    /* Thumbnail image */
+    .room-btn .thumb {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.55);
+      transition: 0.3s;
+    }
+
+    .room-btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent);
+    }
+
+    /* Hover effect */
+    .room-btn:hover .thumb {
+      filter: brightness(0.8);
+    }
+
+    /* Room text */
+    .room-name {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      color: white;
+      font-size: 12px;
+      z-index: 2;
+      letter-spacing: 0.5px;
+    }
+
+    /* Active state */
+    .room-btn.active {
+      outline: 2px solid rgba(255, 255, 255, 0.6);
+    }
+
+    .room-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .room-btn.active {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    #rotate-warning {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      color: white;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      z-index: 999;
+      text-align: center;
+      padding: 20px;
+      display: none; /* JS controls this via orientation check */
+    }
+
+    /* LABEL */
+    #room-label {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 8px 20px;
+      border-radius: 20px;
+    }
+
+    /* Room number badge */
+    .room-num {
+      position: absolute;
+      top: 8px;
+      left: 10px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      z-index: 2;
+    }
+
+    /* Fade overlay for room transitions */
+    #fade-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      background: #0a0a0a;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.22s ease;
+    }
+
+    #fade-overlay.fading {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    /* Panel footer */
+    #panel-footer {
+      padding: 10px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    /* Remove visible scrollbar but keep functionality */
+    #side-panel::-webkit-scrollbar {
+      width: 0px;  /* Hide scrollbar */
+    }
+
+    #side-panel::-webkit-scrollbar-track {
+      background: transparent;  /* Make the track invisible */
+    }
+
+    #side-panel::-webkit-scrollbar-thumb {
+      background: transparent;  /* Make the thumb invisible */
+    }
+
+    /* Firefox */
+    #side-panel {
+      scrollbar-width: none; /* Hide the scrollbar in Firefox */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="toggle" aria-label="Toggle side panel">❯</div>
+
+  <div id="fade-overlay"></div>
+
+  <div id="side-panel">
+    <div id="room-list"></div>
+    <div id="panel-footer"></div>
+  </div>
+
+  <div id="room-label">Living Room</div>
+  <div id="rotate-warning">
+    🔄 Please rotate your device to landscape
+  </div>
+
+  <script>
+    // Portrait warning for mobile
+    function checkOrientation() {
+      const warn = document.getElementById('rotate-warning')
+      if (!warn) return
+      const isPortrait = window.innerHeight > window.innerWidth && window.innerWidth < 768
+      warn.style.display = isPortrait ? 'flex' : 'none'
+    }
+    window.addEventListener('resize', checkOrientation)
+    window.addEventListener('orientationchange', checkOrientation)
+    checkOrientation()
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
