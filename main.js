@@ -1,26 +1,26 @@
 // ─── ROOMS ─────────────────────────────────────────────────────
 const rooms = {
   living:                { image: '/texture/Living_room.jpg',               label: 'Living Room' },
-  livingToBedroom:       { image: '/texture/Living to bedrooms.jpg',        label: 'Living to Bedroom' },
+  livingToBedroom:       { image: '/texture/Living_to_bedrooms.jpg',        label: 'Living to Bedroom' },
   masterCorridor:        { image: '/texture/Master_Bedroom_corridor.jpg',   label: 'Master Corridor' },
   masterBedroom:         { image: '/texture/Master_Bedroom.jpg',            label: 'Master Bedroom' },
   masterToilet:          { image: '/texture/Master_Bedroom_toilet.jpg',     label: 'Master Toilet' },
-  kidsCorridor:          { image: '/texture/Kids bedroom corridor.jpg',     label: 'Kids Corridor' },
+  kidsCorridor:          { image: '/texture/Kids_bedroom_corridor.jpg',     label: 'Kids Corridor' },
   kidsBedroom:           { image: '/texture/Kids_bedroom.jpg',              label: 'Kids Bedroom' },
   kidsToilet:            { image: '/texture/Kids_bedroom_Toilet.jpg',       label: 'Kids Toilet' },
   guestBedroomCorridor1: { image: '/texture/Guest_Bedroom_corridor1.jpg',  label: 'Guest Corridor 1' },
   guestBedroom1:         { image: '/texture/Guest_Bedroom1.jpg',            label: 'Guest Bedroom 1' },
   guestToilet1:          { image: '/texture/Guest_Bedroom1_Toilet.jpg',     label: 'Guest Toilet 1' },
-  guestBedroomCorridor2: { image: '/texture/Guest Bedroom corridor2.jpg',    label: 'Guest Corridor 2' }, 
+  guestBedroomCorridor2: { image: '/texture/Guest_Bedroom_corridor2.jpg',    label: 'Guest Corridor 2' }, 
   guestBedroom2:         { image: '/texture/Guest_Bedroom2.jpg',             label: 'Guest Bedroom 2' },
   guestToilet2:          { image: '/texture/Guest_Bedroom2_Toilet.jpg',     label: 'Guest Toilet 2' },
   foyer:                 { image: '/texture/Foyer.jpg',                     label: 'Foyer' },
-  foyerToLiving1:        { image: '/texture/Foyer to living.jpg',           label: 'Foyer to Living 1' },
+  foyerToLiving1:        { image: '/texture/Foyer_to_living.jpg',           label: 'Foyer to Living 1' },
   foyerToLiving2:        { image: '/texture/FOYER_to_Living_room_01.jpg',   label: 'Foyer to Living 2' },
-  livingToKitchen:       { image: '/texture/Living to kitchen.jpg',         label: 'Living to Kitchen' },
+  livingToKitchen:       { image: '/texture/Living_to_kitchen.jpg',         label: 'Living to Kitchen' },
   kitchen:               { image: '/texture/Kitchen.jpg',                   label: 'Kitchen' },
   utility:               { image: '/texture/Utility.jpg',                   label: 'Utility' },
-  staffRoom:             { image: '/texture/Staff room.jpg',                label: 'Staff Room' }
+  staffRoom:             { image: '/texture/Staff_room.jpg',                label: 'Staff Room' }
 }
 
 // ─── THUMBNAILS ────────────────────────────────────────────────
