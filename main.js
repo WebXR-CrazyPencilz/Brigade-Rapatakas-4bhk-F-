@@ -1,3 +1,7 @@
+function cloudThumb(url) {
+  return url.replace('/upload/', '/upload/w_300,h_90,c_fill,q_auto,f_auto/')
+}
+
 // ─── ROOMS ─────────────────────────────────────────────────────
 const rooms = {
   living:                { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702039/livingroom_kw6tey.jpg',               label: 'LIVING AND DINNING' },
@@ -23,30 +27,9 @@ const rooms = {
   staffRoom:             { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702062/staffroom_sasyds.jpg',                label: 'MAIDS ROOM' }
 }
 
-// ─── THUMBNAILS ────────────────────────────────────────────────
-const thumbnails = {
-  living:                { image: '/Thumbnail/livingroom.jpg' },
-  livingToBedroom:       { image: '/Thumbnail/livingtobedrooms.jpg' },
-  masterCorridor:        { image: '/Thumbnail/masterbedroomcorridor.jpg' },
-  masterBedroom:         { image: '/Thumbnail/masterbedroom.jpg' },
-  masterToilet:          { image: '/Thumbnail/masterbedroomtoilet.jpg' },
-  kidsCorridor:          { image: '/Thumbnail/kidsbedroomcorridor.jpg' },
-  kidsBedroom:           { image: '/Thumbnail/kidsbedroom.jpg' },
-  kidsToilet:            { image: '/Thumbnail/kidsbedroomtoilet.jpg' },
-  guestBedroomCorridor1: { image: '/Thumbnail/guestbedroomcorridor1.jpg' },
-  guestBedroom1:         { image: '/Thumbnail/guestbedroom2.jpg' }, 
-  guestToilet1:          { image: '/Thumbnail/guestbedroomtoilet1.jpg' },
-  guestBedroomCorridor2: { image: '/Thumbnail/guestbedroomcorridor2.jpg' },
-  guestBedroom2:         { image: '/Thumbnail/guestbedroom1.jpg' },
-  guestToilet2:          { image: '/Thumbnail/guestbedroomtoilet2.jpg' },
-  foyer:                 { image: '/Thumbnail/foyer.jpg' },
-  foyerToLiving1:        { image: '/Thumbnail/foyertoliving1.jpg' },
-  foyerToLiving2:        { image: '/Thumbnail/foyertoliving2.jpg' },
-  livingToKitchen:       { image: '/Thumbnail/livingtokitchen.jpg' },
-  kitchen:               { image: '/Thumbnail/kitchen.jpg' },
-  utility:               { image: '/Thumbnail/utility.jpg' },
-  staffRoom:             { image: '/Thumbnail/staffroom.jpg'}
-}
+const thumbnails = Object.fromEntries(
+  Object.entries(rooms).map(([key, val]) => [key, { image: cloudThumb(val.image) }])
+)
 
 // ─── HOTSPOTS ──────────────────────────────────────────────────
 const hotspots = {
