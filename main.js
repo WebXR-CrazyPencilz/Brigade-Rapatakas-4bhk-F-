@@ -25,14 +25,14 @@ const rooms = {
 
 // ─── THUMBNAILS ────────────────────────────────────────────────
 const thumbnails = {
-  living:                { image: '/Thumbnail/Living_room.jpg' },
-  livingToBedroom:       { image: '/Thumbnail/Living to bedrooms.jpg' },
-  masterCorridor:        { image: '/Thumbnail/Master_Bedroom_corridor.jpg' },
-  masterBedroom:         { image: '/Thumbnail/Master_Bedroom.jpg' },
-  masterToilet:          { image: '/Thumbnail/Master_Bedroom_toilet.jpg' },
-  kidsCorridor:          { image: '/Thumbnail/Kids bedroom corridor.jpg' },
-  kidsBedroom:           { image: '/Thumbnail/Kids_bedroom.jpg' },
-  kidsToilet:            { image: '/Thumbnail/Kids_bedroom_Toilet.jpg' },
+  living:                { image: '/Thumbnail/livingroom.jpg' },
+  livingToBedroom:       { image: '/Thumbnail/livingtobedrooms.jpg' },
+  masterCorridor:        { image: '/Thumbnail/masterbedroomcorridor.jpg' },
+  masterBedroom:         { image: '/Thumbnail/masterbedroom.jpg' },
+  masterToilet:          { image: '/Thumbnail/masterbedroomtoilet.jpg' },
+  kidsCorridor:          { image: '/Thumbnail/kidsbedroomcorridor.jpg' },
+  kidsBedroom:           { image: '/Thumbnail/kidsbedroom.jpg' },
+  kidsToilet:            { image: '/Thumbnail/kidsbedroomtoilet.jpg' },
   guestBedroomCorridor1: { image: '/Thumbnail/Guest_Bedroom_corridor1.jpg' },
   guestBedroom1:         { image: '/Thumbnail/Guest_Bedroom1.jpg' }, 
   guestToilet1:          { image: '/Thumbnail/Guest_Bedroom1_Toilet.jpg' },
