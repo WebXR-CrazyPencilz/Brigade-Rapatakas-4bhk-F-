@@ -33,19 +33,19 @@ const thumbnails = {
   kidsCorridor:          { image: '/Thumbnail/kidsbedroomcorridor.jpg' },
   kidsBedroom:           { image: '/Thumbnail/kidsbedroom.jpg' },
   kidsToilet:            { image: '/Thumbnail/kidsbedroomtoilet.jpg' },
-  guestBedroomCorridor1: { image: '/Thumbnail/guestbedroom_corridor1.jpg' },
-  guestBedroom1:         { image: '/Thumbnail/guestbedroom1.jpg' }, 
-  guestToilet1:          { image: '/Thumbnail/guestbedroom1_Toilet.jpg' },
+  guestBedroomCorridor1: { image: '/Thumbnail/guestbedroomcorridor1.jpg' },
+  guestBedroom1:         { image: '/Thumbnail/guestbedroom2.jpg' }, 
+  guestToilet1:          { image: '/Thumbnail/guestbedroomtoilet1.jpg' },
   guestBedroomCorridor2: { image: '/Thumbnail/guestbedroomcorridor2.jpg' },
-  guestBedroom2:         { image: '/Thumbnail/guestbedroom.jpg' },
+  guestBedroom2:         { image: '/Thumbnail/guestbedroom1.jpg' },
   guestToilet2:          { image: '/Thumbnail/guestbedroomtoilet2.jpg' },
   foyer:                 { image: '/Thumbnail/foyer.jpg' },
-  foyerToLiving1:        { image: '/Thumbnail/foyertoliving.jpg' },
-  foyerToLiving2:        { image: '/Thumbnail/foyertolivingroom1.jpg' },
-  livingToKitchen:       { image: '/Thumbnail/Livingtokitchen.jpg' },
+  foyerToLiving1:        { image: '/Thumbnail/foyertoliving1.jpg' },
+  foyerToLiving2:        { image: '/Thumbnail/foyertoliving2.jpg' },
+  livingToKitchen:       { image: '/Thumbnail/livingtokitchen.jpg' },
   kitchen:               { image: '/Thumbnail/kitchen.jpg' },
-  utility:               { image: '/Thumbnail/Utility.jpg' },
-  staffRoom:             { image: '/Thumbnail/staffroom.jpg' }
+  utility:               { image: '/Thumbnail/utility.jpg' },
+  staffRoom:             { image: '/Thumbnail/staffroom.jpg'}
 }
 
 // ─── HOTSPOTS ──────────────────────────────────────────────────
