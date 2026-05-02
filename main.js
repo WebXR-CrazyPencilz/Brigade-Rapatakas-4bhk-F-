@@ -1,12 +1,12 @@
 // ─── ROOMS ─────────────────────────────────────────────────────
 const rooms = {
-  living:                { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702039/livingroom_kw6tey.jpg',               label: 'Living Room' },
-  livingToBedroom:       { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702040/livingtobedrooms_teryyt.jpg',        label: 'Living to Bedroom' },
-  masterCorridor:        { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702058/masterbedroomcorridor_mta2l5.jpg',   label: 'Master Corridor' },
+  LIVINGANDDINNING:      { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702039/livingroom_kw6tey.jpg',               label: 'LIVING AND DINNING' },
+  LIVINGTOBEDROOM:       { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702040/livingtobedrooms_teryyt.jpg',        label: 'Living to Bedroom' },
+  MASTERBEDROOMCORRIDOR:        { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702058/masterbedroomcorridor_mta2l5.jpg',   label: 'Master Corridor' },
   masterBedroom:         { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702049/masterbedroom_lzbzgq.jpg',            label: 'Master Bedroom' },
   masterToilet:          { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702061/masterbedroomtoilet_vr1qqf.jpg',     label: 'Master Toilet' },
-  kidsCorridor:          { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702072/kidsbedroomcorridor_yhcnbh.jpg' },
-  kidsBedroom:           { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702063/kidsbedroom_gzxrul.jpg' },
+  kidsCorridor:          { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702072/kidsbedroomcorridor_yhcnbh.jpg', label: 'Kids Corridor' },
+  kidsBedroom:           { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702063/kidsbedroom_gzxrul.jpg',  label: 'Kids Bedroom' },
   kidsToilet:            { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702069/kidsbedroomtoilet_vohcxo.jpg',       label: 'Kids Toilet' },
   guestBedroomCorridor1: { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702049/guestbedroomcorridor1_ikczlt.jpg',  label: 'Guest Corridor 1' },
   guestBedroom1:         { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702038/guestbedroom1_l9wnvg.jpg',            label: 'Guest Bedroom 1' },
