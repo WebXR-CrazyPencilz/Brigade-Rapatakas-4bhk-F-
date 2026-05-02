@@ -602,5 +602,5 @@ function animate(ts) {
 // ─── INIT ──────────────────────────────────────────────────────
 buildPanel()
 preloadInitial()
-loadRoom('living')
+loadRoom('foyer')
 animate(0)
