@@ -33,19 +33,19 @@ const thumbnails = {
   kidsCorridor:          { image: '/Thumbnail/kidsbedroomcorridor.jpg' },
   kidsBedroom:           { image: '/Thumbnail/kidsbedroom.jpg' },
   kidsToilet:            { image: '/Thumbnail/kidsbedroomtoilet.jpg' },
-  guestBedroomCorridor1: { image: '/Thumbnail/Guest_Bedroom_corridor1.jpg' },
-  guestBedroom1:         { image: '/Thumbnail/Guest_Bedroom1.jpg' }, 
-  guestToilet1:          { image: '/Thumbnail/Guest_Bedroom1_Toilet.jpg' },
-  guestBedroomCorridor2: { image: '/Thumbnail/Guest Bedroom corridor2.jpg' },
-  guestBedroom2:         { image: '/Thumbnail/Guest_Bedroom.jpg' },
-  guestToilet2:          { image: '/Thumbnail/Guest Bedroom Toilet2.jpg' },
-  foyer:                 { image: '/Thumbnail/Foyer.jpg' },
-  foyerToLiving1:        { image: '/Thumbnail/Foyer to living.jpg' },
-  foyerToLiving2:        { image: '/Thumbnail/FOYER_to_Living_room_01.jpg' },
-  livingToKitchen:       { image: '/Thumbnail/Living to kitchen.jpg' },
-  kitchen:               { image: '/Thumbnail/Kitchen.jpg' },
+  guestBedroomCorridor1: { image: '/Thumbnail/guestbedroom_corridor1.jpg' },
+  guestBedroom1:         { image: '/Thumbnail/guestbedroom1.jpg' }, 
+  guestToilet1:          { image: '/Thumbnail/guestbedroom1_Toilet.jpg' },
+  guestBedroomCorridor2: { image: '/Thumbnail/guestbedroomcorridor2.jpg' },
+  guestBedroom2:         { image: '/Thumbnail/guestbedroom.jpg' },
+  guestToilet2:          { image: '/Thumbnail/guestbedroomtoilet2.jpg' },
+  foyer:                 { image: '/Thumbnail/foyer.jpg' },
+  foyerToLiving1:        { image: '/Thumbnail/foyertoliving.jpg' },
+  foyerToLiving2:        { image: '/Thumbnail/foyertolivingroom1.jpg' },
+  livingToKitchen:       { image: '/Thumbnail/Livingtokitchen.jpg' },
+  kitchen:               { image: '/Thumbnail/kitchen.jpg' },
   utility:               { image: '/Thumbnail/Utility.jpg' },
-  staffRoom:             { image: '/Thumbnail/Staff room.jpg' }
+  staffRoom:             { image: '/Thumbnail/staffroom.jpg' }
 }
 
 // ─── HOTSPOTS ──────────────────────────────────────────────────
