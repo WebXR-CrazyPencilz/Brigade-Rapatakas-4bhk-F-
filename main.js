@@ -1,8 +1,8 @@
 // ─── ROOMS ─────────────────────────────────────────────────────
 const rooms = {
-  LIVINGANDDINNING:      { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702039/livingroom_kw6tey.jpg',               label: 'LIVING AND DINNING' },
-  LIVINGTOBEDROOM:       { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702040/livingtobedrooms_teryyt.jpg',        label: 'Living to Bedroom' },
-  MASTERBEDROOMCORRIDOR:        { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702058/masterbedroomcorridor_mta2l5.jpg',   label: 'Master Corridor' },
+  living:                { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702039/livingroom_kw6tey.jpg',               label: 'LIVING AND DINNING' },
+  livingToBedroom:       { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702040/livingtobedrooms_teryyt.jpg',        label: 'LIVING TO BEDROOM' },
+  masterCorridor:        { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702058/masterbedroomcorridor_mta2l5.jpg',   label: 'MASTER BEDROOM CORRIDOR' },
   masterBedroom:         { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702049/masterbedroom_lzbzgq.jpg',            label: 'Master Bedroom' },
   masterToilet:          { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702061/masterbedroomtoilet_vr1qqf.jpg',     label: 'Master Toilet' },
   kidsCorridor:          { image: 'https://res.cloudinary.com/dp5ifzgge/image/upload/v1777702072/kidsbedroomcorridor_yhcnbh.jpg', label: 'Kids Corridor' },
