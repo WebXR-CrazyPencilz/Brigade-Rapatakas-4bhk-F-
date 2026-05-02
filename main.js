@@ -189,7 +189,7 @@ const panoMaterial = new THREE.MeshBasicMaterial()
 scene.add(new THREE.Mesh(sGeo, panoMaterial))
 
 // ─── STATE ─────────────────────────────────────────────────────
-let currentRoom   = 'living'
+let currentRoom   = 'foyer'
 let hotspotMeshes = []
 let labelSprites  = []
 let camRX = 0, camRY = 0
